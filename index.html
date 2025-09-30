@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JEEvolve Chemistry Crash Course 2025 - IIT JEE Preparation</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <style>
         * {
             margin: 0;
@@ -483,14 +484,14 @@
             <div class="original-price">Regular Price: ₹18,999</div>
             <div class="current-price">₹12,000</div>
             <p style="font-size: 1.1em;">Includes: 90+ hours of focused learning | 2000+ solved PYQs<br>20+ tests with analysis | Weekly mentorship sessions | Lecture Video recorded access till JEE Advanced</p>
-            <button class="cta-button" onclick="alert('Payment integration coming soon! Contact us on WhatsApp: 7498163346')">Pay ₹12,000 Now</button>
-            <p style="margin-top: 20px; font-size: 0.95em;">Secure payment  | After payment, complete registration form</p>
+            <button class="cta-button" onclick="initiatePayment()">Pay ₹12,000 Now</button>
+            <p style="margin-top: 20px; font-size: 0.95em;">Secure payment | After payment, complete registration form</p>
         </div>
 
         <div class="cta-section">
             <h2>How to Enroll</h2>
             <p style="font-size: 1.2em; margin-bottom: 30px;">Secure your seat today!</p>
-            <button class="cta-button" onclick="alert('Payment integration coming soon! Contact us on WhatsApp: 7498163346')">Register Now</button>
+            <button class="cta-button" onclick="initiatePayment()">Register Now</button>
             <p style="margin-top: 30px; font-size: 1.1em;">Orientation: 9 October 2024</p>
             
             <div class="contact-info">
@@ -502,10 +503,7 @@
 
         <div class="card">
             <h2>Important Notes</h2>
-            <div class="alert-box">
-                <strong>Not for beginners.</strong>
-                Requires basic concept understanding.
-            </div>
+            
             <ul class="checklist">
                 <li><strong>Commitment:</strong> 3-4 hours daily practice required</li>
                 <li><strong>Limited to 50 students</strong> for personalized attention</li>
@@ -515,7 +513,7 @@
         <div class="cta-section">
             <h2>Last Date to Register: 9 October 2024</h2>
             <p style="font-size: 1.3em; margin: 20px 0;">Classes Begin: 10 October 2024</p>
-            <button class="cta-button" onclick="alert('Payment integration coming soon! Contact us on WhatsApp: 7498163346')">Register Now – Limited Seats</button>
+            <button class="cta-button" onclick="initiatePayment()">Register Now – Limited Seats</button>
             <p style="margin-top: 30px; font-style: italic;">Happy Learning – JEEvolve Academy</p>
         </div>
 
@@ -530,5 +528,54 @@
             </p>
         </footer>
     </div>
+
+    <script>
+        // Razorpay Configuration
+        const RAZORPAY_KEY = "rzp_live_RNwMD9mcT0HYD1"; // REPLACE with your actual Razorpay Key ID
+        const COURSE_AMOUNT = 1200; // ₹12 in paise (12 * 100)
+
+        function initiatePayment() {
+            var options = {
+                "key": RAZORPAY_KEY,
+                "amount": COURSE_AMOUNT,
+                "currency": "INR",
+                "name": "JEEvolve Academy",
+                "description": "Chemistry Crash Course 2025",
+                "handler": function (response) {
+                    // Payment successful
+                    console.log("Payment ID: " + response.razorpay_payment_id);
+                    
+                    // Redirect to registration page with payment ID
+                    window.location.href = "registration.html?payment_id=" + response.razorpay_payment_id;
+                },
+                "prefill": {
+                    "name": "",
+                    "email": "",
+                    "contact": ""
+                },
+                "notes": {
+                    "course": "Chemistry Crash Course 2025",
+                    "batch": "October 2024"
+                },
+                "theme": {
+                    "color": "#667eea"
+                },
+                "modal": {
+                    "ondismiss": function() {
+                        alert("Payment cancelled. Contact us on WhatsApp if you face any issues: 7498163346");
+                    }
+                }
+            };
+            
+            var rzp = new Razorpay(options);
+            
+            rzp.on('payment.failed', function (response) {
+                alert("Payment failed. Error: " + response.error.description);
+                console.error(response.error);
+            });
+            
+            rzp.open();
+        }
+    </script>
 </body>
 </html>
