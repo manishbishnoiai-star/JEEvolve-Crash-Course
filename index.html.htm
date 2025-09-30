@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEEvolve Chemistry Crash Course 2025 - IIT JEE Preparation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            color: #764ba2;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .card h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .overview-item {
+            background: linear-gradient(135deg, #667eea15, #764ba215);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .overview-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .checklist li {
+            padding: 10px 0;
+            padding-left: 35px;
+            position: relative;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: white;
+            background: #667eea;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .timeline {
+            border-left: 3px solid #667eea;
+            padding-left: 30px;
+            margin-left: 15px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: -37px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+        }
+        
+        .timeline-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .timeline-item ul {
+            margin-left: 20px;
+        }
+        
+        .price-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .price-box .original-price {
+            font-size: 1.3em;
+            text-decoration: line-through;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        .price-box .current-price {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .includes-item {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border: none;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        
+        .contact-item {
+            background: rgba(255,255,255,0.2);
+            padding: 12px 25px;
+            border-radius: 25px;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .alert-box strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .mentor-section {
+            background: linear-gradient(135deg, #f8f9ff, #fff);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 2px solid #667eea;
+        }
+        
+        .mentor-section h3 {
+            color: #667eea;
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .mentor-section p {
+            text-align: center;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+            border-radius: 15px;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .header .subtitle {
+                font-size: 1em;
+            }
+            
+            .price-box .current-price {
+                font-size: 2em;
+            }
+            
+            .cta-section {
+                padding: 30px 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>JEEvolve Chemistry Crash Course 2025</h1>
+            <p class="subtitle">Complete JEE Mains Mastery in 3 Months</p>
+            <span class="badge">Physical & Inorganic Chemistry | Class 11 + 12</span>
+        </div>
+
+        <div class="card">
+            <h2>Course Overview</h2>
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <strong>Duration</strong>
+                    10 Oct 2024 – 10 Jan 2025<br>(3 Months)
+                </div>
+                <div class="overview-item">
+                    <strong>Target</strong>
+                    JEE Mains 2025
+                </div>
+                <div class="overview-item">
+                    <strong>Coverage</strong>
+                    Class 11 + 12<br>Physical & Inorganic
+                </div>
+                <div class="overview-item">
+                    <strong>Format</strong>
+                    Rapid Revision + PYQs + Mock Tests
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Why This Crash Course?</h2>
+            <p style="margin-bottom: 20px; font-size: 1.1em; color: #666;">Strategic sprint for students who:</p>
+            <ul class="checklist">
+                <li>Have basic concept knowledge</li>
+                <li>Need focused revision and intensive practice</li>
+                <li>Want to maximize Chemistry score in limited time</li>
+                <li>Need exam-ready preparation, not lengthy theory</li>
+            </ul>
+            
+            <h3>What You Get</h3>
+            <ul class="checklist">
+                <li>Quick concept revision with formula sheets</li>
+                <li>15+ years JEE Mains PYQs (topic-wise solutions)</li>
+                <li>High-yield problem-solving techniques</li>
+                <li>Weekly mock tests (JEE pattern)</li>
+                <li>Personal doubt-clearing with Manish Sir</li>
+                <li>Exam strategy for score optimization</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3-Month Study Plan</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Month 1: October (Class 11)</h4>
+                    <p><strong>Physical Chemistry</strong></p>
+                    <ul>
+                        <li>Week 1: Mole Concept, Atomic Structure, States of Matter</li>
+                        <li>Week 2: Chemical Equilibrium, Ionic Equilibrium</li>
+                        <li>Week 3: Redox Reactions, Thermodynamics</li>
+                        <li>Week 4: Revision + Chapter Test</li>
+                    </ul>
+                    <p><strong>Inorganic Chemistry</strong></p>
+                    <ul>
+                        <li>Periodic Table, Chemical Bonding, Hydrogen</li>
+                        <li>s-Block, p-Block Elements (Class 11)</li>
+                        <li>Weekly PYQ sessions</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Month 2: November (Class 12)</h4>
+                    <p><strong>Physical Chemistry</strong></p>
+                    <ul>
+                        <li>Week 1: Solutions, Colligative Properties</li>
+                        <li>Week 2: Electrochemistry, Chemical Kinetics</li>
+                        <li>Week 3: Solid State, Surface Chemistry</li>
+                        <li>Week 4: Revision + Chapter Test</li>
+                    </ul>
+                    <p><strong>Inorganic Chemistry</strong></p>
+                    <ul>
+                        <li>Metallurgy, p-Block (Class 12)</li>
+                        <li>d & f-Block, Coordination Chemistry</li>
+                        <li>Qualitative Analysis</li>
+                        <li>Weekly PYQ sessions</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Month 3: December–January (Integration)</h4>
+                    <ul>
+                        <li><strong>Weeks 1-2:</strong> Full syllabus rapid revision</li>
+                        <li><strong>Weeks 3-4:</strong> 6 Full-Length JEE Mains Mock Tests</li>
+                        <li><strong>Week 5 (Jan 6-10):</strong> Final strategy & weak area targeting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Course Includes</h2>
+            
+            <div class="includes-grid">
+                <div class="includes-item">
+                    <strong>Live Classes</strong>
+                    5 days/week<br>(1.5 hours each)
+                </div>
+                <div class="includes-item">
+                    <strong>Recorded Lectures</strong>
+                    Access till JEE Advanced
+                </div>
+                <div class="includes-item">
+                    <strong>2000+ PYQs</strong>
+                    With solutions (2008-2024)
+                </div>
+                <div class="includes-item">
+                    <strong>Study Material</strong>
+                    Notes, Formula Sheets, Charts
+                </div>
+                <div class="includes-item">
+                    <strong>Test Series</strong>
+                    All Chapter Tests + 20 Full JEE Mains Mock Tests + Daily Practice Test
+                </div>
+                <div class="includes-item">
+                    <strong>Mentorship</strong>
+                    Weekly 1-on-1 with Manish Sir
+                </div>
+            </div>
+
+            <h3>Study Material</h3>
+            <ul class="checklist">
+                <li>Quick revision notes for all topics</li>
+                <li>Formula sheets & reaction charts</li>
+                <li>Practice Test Acess on JEEvolve</li>
+                <li>PYQ and Mock Tests Acess on JEEvolve</li>
+            </ul>
+
+            <h3>Mentorship</h3>
+            <ul class="checklist">
+                <li>Weekly 1-on-1 progress review with Manish Sir</li>
+                <li>WhatsApp doubt support</li>
+                <li>Personalized improvement plan</li>
+            </ul>
+
+            <h3>Test Series</h3>
+            <ul class="checklist">
+                <li>All chapter-wise + PYQ + Daily Practice tests</li>
+                <li>20 full-length mocks with analytics</li>
+            </ul>
+        </div>
+
+        <div class="mentor-section">
+            <h3>Led & Taught by Manish Bishnoi</h3>
+            <p><strong>IIT Bhubaneswar | Royal Society of Chemistry Member | 5000+ Students Trained</strong></p>
+            <p>Expert in rapid revision strategies and targeted JEE preparation.</p>
+        </div>
+
+        <div class="price-box">
+            <h2 style="color: white; border: none;">Course Fee</h2>
+            <div class="original-price">Regular Price: ₹18,999</div>
+            <div class="current-price">₹12,000</div>
+            <p style="font-size: 1.1em;">Includes: 90+ hours of focused learning | 2000+ solved PYQs<br>20+ tests with analysis | Weekly mentorship sessions | Lecture Video recorded access till JEE Advanced</p>
+            <button class="cta-button" onclick="alert('Payment integration coming soon! Contact us on WhatsApp: 7498163346')">Pay ₹12,000 Now</button>
+            <p style="margin-top: 20px; font-size: 0.95em;">Secure payment  | After payment, complete registration form</p>
+        </div>
+
+        <div class="cta-section">
+            <h2>How to Enroll</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">Secure your seat today!</p>
+            <button class="cta-button" onclick="alert('Payment integration coming soon! Contact us on WhatsApp: 7498163346')">Register Now</button>
+            <p style="margin-top: 30px; font-size: 1.1em;">Orientation: 9 October 2024</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">WhatsApp: 7498163346</div>
+                <div class="contact-item">Instagram: @JEEvolve_Academy</div>
+                <div class="contact-item">YouTube: JEEvolve</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Important Notes</h2>
+            <div class="alert-box">
+                <strong>Not for beginners.</strong>
+                Requires basic concept understanding.
+            </div>
+            <ul class="checklist">
+                <li><strong>Commitment:</strong> 3-4 hours daily practice required</li>
+                <li><strong>Limited to 50 students</strong> for personalized attention</li>
+            </ul>
+        </div>
+
+        <div class="cta-section">
+            <h2>Last Date to Register: 9 October 2024</h2>
+            <p style="font-size: 1.3em; margin: 20px 0;">Classes Begin: 10 October 2024</p>
+            <button class="cta-button" onclick="alert('Payment integration coming soon! Contact us on WhatsApp: 7498163346')">Register Now – Limited Seats</button>
+            <p style="margin-top: 30px; font-style: italic;">Happy Learning – JEEvolve Academy</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 JEEvolve Academy. All rights reserved.</p>
+            <p style="margin-top: 15px;">
+                <a href="terms.html">Terms & Conditions</a> |
+                <a href="refund.html">Cancellation & Refund</a> |
+                <a href="privacy.html">Privacy Policy</a> |
+                <a href="contact.html">Contact Us</a> |
+                <a href="shipping.html">Delivery Policy</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

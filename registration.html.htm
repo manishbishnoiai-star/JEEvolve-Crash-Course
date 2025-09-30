@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration - JEEvolve Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+        
+        .success-message strong {
+            color: #155724;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .required {
+            color: #dc3545;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        .help-text {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .note-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .note-box strong {
+            color: #856404;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Complete Your Registration</h1>
+            <p>JEEvolve Chemistry Crash Course 2025</p>
+        </div>
+
+        <div class="success-message">
+            <strong>Payment Successful!</strong> Please complete your registration to get course access.
+        </div>
+
+        <form id="registrationForm" action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="hidden_iframe">
+            
+            <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" name="entry.YOUR_ENTRY_ID" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="entry.YOUR_ENTRY_ID" required>
+                <div class="help-text">All course materials will be sent to this email</div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="entry.YOUR_ENTRY_ID" pattern="[0-9]{10}" required>
+                <div class="help-text">10-digit mobile number without +91</div>
+            </div>
+
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp Number <span class="required">*</span></label>
+                <input type="tel" id="whatsapp" name="entry.YOUR_ENTRY_ID" pattern="[0-9]{10}" required>
+                <div class="help-text">For course group and updates</div>
+            </div>
+
+            <div class="form-group">
+                <label for="currentClass">Current Class <span class="required">*</span></label>
+                <select id="currentClass" name="entry.YOUR_ENTRY_ID" required>
+                    <option value="">Select your class</option>
+                    <option value="Class 11">Class 11</option>
+                    <option value="Class 12">Class 12</option>
+                    <option value="Dropper">Dropper (Preparing for JEE 2025)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="targetYear">Target JEE Year <span class="required">*</span></label>
+                <select id="targetYear" name="entry.YOUR_ENTRY_ID" required>
+                    <option value="">Select target year</option>
+                    
+                    <option value="JEE 2026">JEE 2026</option>
+                    <option value="JEE 2027">JEE 2027</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="transactionId">Payment Transaction ID <span class="required">*</span></label>
+                <input type="text" id="transactionId" name="entry.YOUR_ENTRY_ID" required>
+                <div class="help-text">Found in your payment confirmation email/SMS</div>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentAmount">Amount Paid <span class="required">*</span></label>
+                <input type="text" id="paymentAmount" name="entry.YOUR_ENTRY_ID" value="₹11,000" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentScreenshot">Payment Screenshot (Optional)</label>
+                <input type="file" id="paymentScreenshot" accept="image/*">
+                <div class="help-text">Upload payment confirmation screenshot for faster verification</div>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City <span class="required">*</span></label>
+                <input type="text" id="city" name="entry.YOUR_ENTRY_ID" required>
+            </div>
+
+            <div class="form-group">
+                <label for="school">School/College Name</label>
+                <input type="text" id="school" name="entry.YOUR_ENTRY_ID">
+            </div>
+
+            <div class="form-group">
+                <label for="coachingInfo">Are you currently enrolled in any coaching? <span class="required">*</span></label>
+                <select id="coachingInfo" name="entry.YOUR_ENTRY_ID" required>
+                    <option value="">Select option</option>
+                    <option value="Yes - Offline">Yes - Offline coaching</option>
+                    <option value="Yes - Online">Yes - Online coaching</option>
+                    <option value="No">No, self-study only</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="chemistryLevel">Rate your current Chemistry preparation level <span class="required">*</span></label>
+                <select id="chemistryLevel" name="entry.YOUR_ENTRY_ID" required>
+                    <option value="">Select level</option>
+                    <option value="Beginner">Beginner (Just started)</option>
+                    <option value="Basic">Basic (Covered Class 11)</option>
+                    <option value="Intermediate">Intermediate (Covered Class 11+12, need practice)</option>
+                    <option value="Advanced">Advanced (Need revision + advanced problems)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="expectations">What do you expect from this crash course?</label>
+                <textarea id="expectations" name="entry.YOUR_ENTRY_ID" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="hearAbout">How did you hear about JEEvolve? <span class="required">*</span></label>
+                <select id="hearAbout" name="entry.YOUR_ENTRY_ID" required>
+                    <option value="">Select option</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="YouTube">YouTube</option>
+                    <option value="Friend/Reference">Friend/Reference</option>
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Google Search">Google Search</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="note-box">
+                <strong>Note:</strong> After submitting this form, you will receive course access details within 24 hours on your registered WhatsApp and email.
+            </div>
+
+            <button type="submit" class="submit-btn">Complete Registration</button>
+        </form>
+    </div>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thankyou.html';}"></iframe>
+
+    <script>
+        var submitted = false;
+        
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            submitted = true;
+        });
+
+        // Auto-fill WhatsApp if same as phone
+        document.getElementById('phone').addEventListener('blur', function() {
+            var whatsappField = document.getElementById('whatsapp');
+            if (!whatsappField.value) {
+                whatsappField.value = this.value;
+            }
+        });
+    </script>
+</body>
+</html>
