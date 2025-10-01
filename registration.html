@@ -72,7 +72,6 @@
         input[type="text"],
         input[type="email"],
         input[type="tel"],
-        input[type="file"],
         select,
         textarea {
             width: 100%;
@@ -156,91 +155,85 @@
             <strong>Payment Successful!</strong> Please complete your registration to get course access.
         </div>
 
-        <form id="registrationForm" action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="hidden_iframe">
+        <form id="registrationForm" action="https://docs.google.com/forms/d/e/1FAIpQLScqvD5moEsheSyxikTa6sjca_GBq1FPt9g-0I1M9P6J9YKwBA/formResponse" method="POST" target="hidden_iframe">
             
             <div class="form-group">
                 <label for="fullName">Full Name <span class="required">*</span></label>
-                <input type="text" id="fullName" name="entry.YOUR_ENTRY_ID" required>
+                <input type="text" id="fullName" name="entry.1642537593" required>
             </div>
 
             <div class="form-group">
                 <label for="email">Email Address <span class="required">*</span></label>
-                <input type="email" id="email" name="entry.YOUR_ENTRY_ID" required>
+                <input type="email" id="email" name="entry.419741794" required>
                 <div class="help-text">All course materials will be sent to this email</div>
             </div>
 
             <div class="form-group">
                 <label for="phone">Phone Number <span class="required">*</span></label>
-                <input type="tel" id="phone" name="entry.YOUR_ENTRY_ID" pattern="[0-9]{10}" required>
+                <input type="tel" id="phone" name="entry.584827680" pattern="[0-9]{10}" required>
                 <div class="help-text">10-digit mobile number without +91</div>
             </div>
 
             <div class="form-group">
                 <label for="whatsapp">WhatsApp Number <span class="required">*</span></label>
-                <input type="tel" id="whatsapp" name="entry.YOUR_ENTRY_ID" pattern="[0-9]{10}" required>
+                <input type="tel" id="whatsapp" name="entry.566065815" pattern="[0-9]{10}" required>
                 <div class="help-text">For course group and updates</div>
             </div>
 
             <div class="form-group">
                 <label for="currentClass">Current Class <span class="required">*</span></label>
-                <select id="currentClass" name="entry.YOUR_ENTRY_ID" required>
+                <select id="currentClass" name="entry.1203423430" required>
                     <option value="">Select your class</option>
                     <option value="Class 11">Class 11</option>
                     <option value="Class 12">Class 12</option>
-                    <option value="Dropper">Dropper (Preparing for JEE 2025)</option>
+                    <option value="Dropper">Dropper</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="targetYear">Target JEE Year <span class="required">*</span></label>
-                <select id="targetYear" name="entry.YOUR_ENTRY_ID" required>
+                <select id="targetYear" name="entry.1078048794" required>
                     <option value="">Select target year</option>
-                    
-                    <option value="JEE 2026">JEE 2026</option>
-                    <option value="JEE 2027">JEE 2027</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="transactionId">Payment Transaction ID <span class="required">*</span></label>
-                <input type="text" id="transactionId" name="entry.YOUR_ENTRY_ID" required>
+                <input type="text" id="transactionId" name="entry.1624241344" required>
                 <div class="help-text">Found in your payment confirmation email/SMS</div>
             </div>
 
             <div class="form-group">
                 <label for="paymentAmount">Amount Paid <span class="required">*</span></label>
-                <input type="text" id="paymentAmount" name="entry.YOUR_ENTRY_ID" value="₹11,000" readonly>
-            </div>
-
-            <div class="form-group">
-                <label for="paymentScreenshot">Payment Screenshot (Optional)</label>
-                <input type="file" id="paymentScreenshot" accept="image/*">
-                <div class="help-text">Upload payment confirmation screenshot for faster verification</div>
+                <input type="text" id="paymentAmount" name="entry.1918440627" value="₹12,000" readonly>
             </div>
 
             <div class="form-group">
                 <label for="city">City <span class="required">*</span></label>
-                <input type="text" id="city" name="entry.YOUR_ENTRY_ID" required>
+                <input type="text" id="city" name="entry.1997317018" required>
             </div>
 
             <div class="form-group">
                 <label for="school">School/College Name</label>
-                <input type="text" id="school" name="entry.YOUR_ENTRY_ID">
+                <input type="text" id="school" name="entry.372440630">
             </div>
 
             <div class="form-group">
                 <label for="coachingInfo">Are you currently enrolled in any coaching? <span class="required">*</span></label>
-                <select id="coachingInfo" name="entry.YOUR_ENTRY_ID" required>
+                <select id="coachingInfo" name="entry.1553379049" required>
                     <option value="">Select option</option>
-                    <option value="Yes - Offline">Yes - Offline coaching</option>
-                    <option value="Yes - Online">Yes - Online coaching</option>
+                    <option value="Yes-Offline">Yes - Offline coaching</option>
+                    <option value="Yes-Online">Yes - Online coaching</option>
                     <option value="No">No, self-study only</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="chemistryLevel">Rate your current Chemistry preparation level <span class="required">*</span></label>
-                <select id="chemistryLevel" name="entry.YOUR_ENTRY_ID" required>
+                <select id="chemistryLevel" name="entry.153364475" required>
                     <option value="">Select level</option>
                     <option value="Beginner">Beginner (Just started)</option>
                     <option value="Basic">Basic (Covered Class 11)</option>
@@ -251,18 +244,18 @@
 
             <div class="form-group">
                 <label for="expectations">What do you expect from this crash course?</label>
-                <textarea id="expectations" name="entry.YOUR_ENTRY_ID" rows="3"></textarea>
+                <textarea id="expectations" name="entry.2041465980" rows="3"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="hearAbout">How did you hear about JEEvolve? <span class="required">*</span></label>
-                <select id="hearAbout" name="entry.YOUR_ENTRY_ID" required>
+                <select id="hearAbout" name="entry.962934768" required>
                     <option value="">Select option</option>
                     <option value="Instagram">Instagram</option>
                     <option value="YouTube">YouTube</option>
-                    <option value="Friend/Reference">Friend/Reference</option>
+                    <option value="Friend">Friend/Reference</option>
                     <option value="WhatsApp">WhatsApp</option>
-                    <option value="Google Search">Google Search</option>
+                    <option value="Google">Google Search</option>
                     <option value="Other">Other</option>
                 </select>
             </div>
