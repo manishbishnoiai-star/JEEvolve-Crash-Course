@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JEEvolve Chemistry Crash Course 2025 - IIT JEE Preparation</title>
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <style>
         * {
             margin: 0;
@@ -345,7 +344,7 @@
                 </div>
                 <div class="overview-item">
                     <strong>Format</strong>
-                    Rapid Revision + PYQs + Mock Tests(Computer Based Online Test)
+                    Rapid Revision + PYQs + Mock Tests
                 </div>
             </div>
         </div>
@@ -356,7 +355,6 @@
             <ul class="checklist">
                 <li>Have basic concept knowledge</li>
                 <li>Need focused revision and intensive practice</li>
-                <li>Want to practice like real JEE Mains Exam Test Series</li>
                 <li>Want to maximize Chemistry score in limited time</li>
                 <li>Need exam-ready preparation, not lengthy theory</li>
             </ul>
@@ -365,7 +363,6 @@
             <ul class="checklist">
                 <li>Quick concept revision with formula sheets</li>
                 <li>15+ years JEE Mains PYQs (topic-wise solutions)</li>
-               <li>Acess to JEEvolve JEE Mains Test Series</li>
                 <li>High-yield problem-solving techniques</li>
                 <li>Weekly mock tests (JEE pattern)</li>
                 <li>Personal doubt-clearing with Manish Sir</li>
@@ -482,21 +479,23 @@
         </div>
 
         <div class="price-box">
-            <h2 style="color: white; border: none;">Course Fee</h2>
-            <div class="original-price">Regular Price: ₹18,999</div>
-            <div class="current-price">₹12,000</div>
-            <p style="font-size: 1.1em;">Includes: 90+ hours of focused learning | 2000+ solved PYQs<br>20+ tests with analysis | Weekly mentorship sessions | Lecture Video recorded access till JEE Advanced</p>
-            <button class="cta-button" onclick="initiatePayment()">Pay ₹12,000 Now</button>
-            <p style="margin-top: 20px; font-size: 0.95em;">Secure payment | After payment, complete registration form</p>
+            <h2 style="color: white; border: none;">Admission Closed</h2>
+            <div class="current-price" style="font-size: 2em;">First Batch Full!</div>
+            <p style="font-size: 1.2em; margin: 20px 0; line-height: 1.8;">
+                All 50 limited seats for the first batch have been filled.<br><br>
+                <strong>New Batch Starting Soon!</strong><br>
+                Message us on WhatsApp for early registration in the next batch.
+            </p>
+            <a href="https://wa.me/917498163346?text=Hi,%20I'm%20interested%20in%20early%20registration%20for%20the%20next%20batch" class="cta-button">Message on WhatsApp</a>
+            <p style="margin-top: 20px; font-size: 0.95em;">Contact: 7498163346</p>
         </div>
 
         <div class="cta-section">
-            <h2>How to Enroll</h2>
-            <p style="font-size: 1.2em; margin-bottom: 30px;">Secure your seat today!</p>
-            <button class="cta-button" onclick="initiatePayment()">Register Now</button>
-            <p style="margin-top: 30px; font-size: 1.1em;">Orientation: 9 October 2024</p>
-            
-            <div class="contact-info">
+            <h2>Interested in Next Batch?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">First batch admissions are closed. Be the first to know about the next batch!</p>
+            <a href="https://wa.me/917498163346?text=Hi,%20I'm%20interested%20in%20early%20registration%20for%20the%20next%20batch" class="cta-button">Message for Early Registration</a>
+
+            <div class="contact-info" style="margin-top: 40px;">
                 <div class="contact-item">WhatsApp: 7498163346</div>
                 <div class="contact-item">Instagram: @JEEvolve_Academy</div>
                 <div class="contact-item">YouTube: JEEvolve</div>
@@ -505,7 +504,10 @@
 
         <div class="card">
             <h2>Important Notes</h2>
-            
+            <div class="alert-box">
+                <strong>Not for beginners.</strong>
+                Requires basic concept understanding.
+            </div>
             <ul class="checklist">
                 <li><strong>Commitment:</strong> 3-4 hours daily practice required</li>
                 <li><strong>Limited to 50 students</strong> for personalized attention</li>
@@ -513,9 +515,9 @@
         </div>
 
         <div class="cta-section">
-            <h2>Last Date to Register: 9 October 2024</h2>
-            <p style="font-size: 1.3em; margin: 20px 0;">Classes Begin: 10 October 2024</p>
-            <button class="cta-button" onclick="initiatePayment()">Register Now – Limited Seats</button>
+            <h2>First Batch: Admissions Closed</h2>
+            <p style="font-size: 1.3em; margin: 20px 0;">All 50 limited seats have been filled!</p>
+            <a href="https://wa.me/917498163346?text=Hi,%20I'm%20interested%20in%20early%20registration%20for%20the%20next%20batch" class="cta-button">WhatsApp for Next Batch</a>
             <p style="margin-top: 30px; font-style: italic;">Happy Learning – JEEvolve Academy</p>
         </div>
 
@@ -530,58 +532,5 @@
             </p>
         </footer>
     </div>
-
-    <script>
-        // Razorpay Configuration
-        const RAZORPAY_KEY = "rzp_live_RO6MyfFezG05Gs"; // REPLACE with your actual Razorpay Key ID
-        const COURSE_AMOUNT = 1200000; // ₹12000 in paise (12000 * 100)
-
-        function initiatePayment() {
-            var options = {
-                "key": RAZORPAY_KEY,
-                "amount": COURSE_AMOUNT,
-                "currency": "INR",
-                "name": "JEEvolve Academy",
-                "description": "Chemistry Crash Course 2025",
-                "handler": function (response) {
-                    // Payment successful
-                    console.log("Payment ID: " + response.razorpay_payment_id);
-                    
-                    // Redirect to registration page with payment ID
-                    window.location.href = "registration.html?payment_id=" + response.razorpay_payment_id;
-                },
-                "prefill": {
-                    "name": "",
-                    "email": "",
-                    "contact": ""
-                },
-                "notes": {
-                    "course": "Chemistry Crash Course 2025",
-                    "batch": "October 2024"
-                },
-                "theme": {
-                    "color": "#667eea"
-                },
-                "modal": {
-                    "ondismiss": function() {
-                        alert("Payment cancelled. Contact us on WhatsApp if you face any issues: 7498163346");
-                    }
-                }
-            };
-            
-            var rzp = new Razorpay(options);
-            
-            rzp.on('payment.failed', function (response) {
-                alert("Payment failed. Error: " + response.error.description);
-                console.error(response.error);
-            });
-            
-            rzp.open();
-        }
-    </script>
 </body>
 </html>
-
-
-
-
